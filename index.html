@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+</head>
+<body>
+    <style>
+        p{
+            color: var(--Secondary-Font, #98A2B2);
+            font-family: Lato;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+            margin: 0px;
+        }
+        h5{
+            color: var(--Font-COlor, #1F2633);
+            font-family: Lato;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            margin: 0px;
+        }
+        .form-container .form-group input ,
+        .form-container .form-group select{
+            height: 48px;
+            border-radius: 10px;
+            border: 1px solid var(--Light-Border, #F2F2F2);
+            background: var(--White, #FFF);
+            color: var(--Secondary-Font, #98A2B2);
+            font-family: Lato;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        .form-container .form-group label
+        {
+            color: var(--Font-COlor, #1F2633);
+            font-family: Lato;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        @media (min-width: 576px){
+            .modal-dialog {
+                max-width: 560px;
+                margin: 1.75rem auto;
+            }
+        }
+    </style>
+
+<div class="modal1">
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1" style="border-radius: 10px;background: var(--Orange, #F63);padding: 16px 20px; border:none;">
+        Launch demo modal1
+    </button>
+
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="border-radius: 20px;">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><b>Payment Method</b><h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body px-4">
+            <p>Select Payment method type to add:</p>
+            <div class="payment-list-container">
+                <div class="row d-flex align-items-center border-bottom py-3">
+                    <div class="col-2 payment-img-container">
+                        <img src="" alt="" class="d-block w-100 h-100 img-fluid"/>
+                    </div>
+                    <div class="col-9 payment-text">
+                        <h5>Connect Google Pay</h5>
+                        <p>Connect a payment method via your google pay account.</p>
+                    </div>
+                    <div class="col-1 payment-button">
+                        <a><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M6.75001 11.9063L9.66001 8.9963L6.75001 6.0863C6.45751 5.7938 6.45751 5.3213 6.75001 5.0288C7.04251 4.7363 7.51501 4.7363 7.80751 5.0288L11.25 8.4713C11.5425 8.7638 11.5425 9.2363 11.25 9.5288L7.80751 12.9713C7.51501 13.2638 7.04251 13.2638 6.75001 12.9713C6.46501 12.6788 6.45751 12.1988 6.75001 11.9063Z" fill="#98A2B2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="row d-flex align-items-center border-bottom py-3">
+                    <div class="col-2 payment-img-container">
+                        <img src="" alt="" class="d-block w-100 h-100 img-fluid"/>
+                    </div>
+                    <div class="col-9 payment-text">
+                        <h5>Add a credit card</h5>
+                        <p>We accept Visa, Mastercard, American Express , Union Pay and Discover.</p>
+                    </div>
+                    <div class="col-1 payment-button">
+                        <a><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M6.75001 11.9063L9.66001 8.9963L6.75001 6.0863C6.45751 5.7938 6.45751 5.3213 6.75001 5.0288C7.04251 4.7363 7.51501 4.7363 7.80751 5.0288L11.25 8.4713C11.5425 8.7638 11.5425 9.2363 11.25 9.5288L7.80751 12.9713C7.51501 13.2638 7.04251 13.2638 6.75001 12.9713C6.46501 12.6788 6.45751 12.1988 6.75001 11.9063Z" fill="#98A2B2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="row d-flex align-items-center py-3">
+                    <div class="col-2 payment-img-container">
+                        <img src="" alt="" class="d-block w-100 h-100 img-fluid"/>
+                    </div>
+                    <div class="col-9 payment-text">
+                        <h5>Connect PayPal</h5>
+                        <p>Connect your paypal account for automatic payments.</p>
+                    </div>
+                    <div class="col-1 payment-button">
+                        <a><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M6.75001 11.9063L9.66001 8.9963L6.75001 6.0863C6.45751 5.7938 6.45751 5.3213 6.75001 5.0288C7.04251 4.7363 7.51501 4.7363 7.80751 5.0288L11.25 8.4713C11.5425 8.7638 11.5425 9.2363 11.25 9.5288L7.80751 12.9713C7.51501 13.2638 7.04251 13.2638 6.75001 12.9713C6.46501 12.6788 6.45751 12.1988 6.75001 11.9063Z" fill="#98A2B2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal2">
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2" style="border-radius: 10px;background: var(--Orange, #F63);padding: 16px 20px; border:none;">
+        Launch demo modal2
+    </button>
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="border-radius: 20px;">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><b>Add a New payment Method</b><h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body px-4">
+                <p style="color: #3361FF;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M11.2501 11.9063L8.34011 8.9963L11.2501 6.0863C11.5426 5.7938 11.5426 5.3213 11.2501 5.0288C10.9576 4.7363 10.4851 4.7363 10.1926 5.0288L6.75011 8.4713C6.45761 8.7638 6.45761 9.2363 6.75011 9.5288L10.1926 12.9713C10.4851 13.2638 10.9576 13.2638 11.2501 12.9713C11.5351 12.6788 11.5426 12.1988 11.2501 11.9063Z" fill="#3361FF"/>
+                </svg>Choose a different payment methods</p>
+            <div class="payment-list-container">
+                <div class="row d-flex align-items-center py-3">
+                    <div class="col-2 payment-img-container">
+                        <img src="" alt="" class="d-block w-100 h-100 img-fluid"/>
+                    </div>
+                    <div class="col-10 payment-text">
+                        <h5>Connect Google Pay</h5>
+                        <p class="mb-4">When you click GPay, choose a payment method and then allow the $0 authorization
+                            charge which will verify your card to be used on ZipExpress.</p>
+                        <buttom style="border-radius: 10px; background: var(--Font-COlor, #1F2633);padding: 16px 20px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="19" viewBox="0 0 47 19" fill="none">
+                            <path d="M21.9549 9.25138V14.6236H20.25V1.35742H24.7697C25.9152 1.35742 26.8919 1.73929 27.6911 2.50292C28.508 3.26656 28.9165 4.1989 28.9165 5.29996C28.9165 6.42768 28.508 7.36002 27.6911 8.11477C26.9008 8.86952 25.9241 9.24249 24.7697 9.24249H21.9549V9.25138ZM21.9549 2.99127V7.61753H24.8052C25.4801 7.61753 26.0484 7.38669 26.4923 6.9338C26.9452 6.48092 27.1761 5.93044 27.1761 5.30885C27.1761 4.69614 26.9452 4.15446 26.4923 3.70166C26.0483 3.231 25.489 3.00016 24.8052 3.00016H21.9549V2.99127Z" fill="white"/>
+                            <path d="M33.3739 5.24658C34.6348 5.24658 35.6293 5.584 36.3574 6.25884C37.0856 6.93367 37.4496 7.85713 37.4496 9.0293V14.6235H35.8246V13.3626H35.7536C35.0521 14.4015 34.1109 14.9165 32.9388 14.9165C31.9354 14.9165 31.1007 14.6235 30.4258 14.0285C29.751 13.4336 29.4136 12.6965 29.4136 11.8086C29.4136 10.8674 29.7688 10.1216 30.4792 9.57098C31.1896 9.01161 32.1397 8.73632 33.3206 8.73632C34.3329 8.73632 35.1676 8.92281 35.8158 9.29569V8.90503C35.8158 8.31011 35.585 7.81287 35.1143 7.39554C34.6437 6.97821 34.0932 6.77394 33.4627 6.77394C32.5126 6.77394 31.7578 7.1735 31.2072 7.98158L29.7065 7.04034C30.5324 5.84151 31.7578 5.24658 33.3739 5.24658ZM31.1718 11.8352C31.1718 12.2792 31.3583 12.6522 31.74 12.9452C32.113 13.2382 32.557 13.3892 33.0631 13.3892C33.7824 13.3892 34.4217 13.1228 34.9812 12.59C35.5406 12.0572 35.8247 11.4356 35.8247 10.7164C35.2919 10.2991 34.5549 10.0859 33.6048 10.0859C32.9122 10.0859 32.3351 10.2546 31.8733 10.5831C31.4026 10.9295 31.1718 11.3469 31.1718 11.8352Z" fill="white"/>
+                            <path d="M46.72 5.53955L41.0371 18.6103H39.2789L41.3922 14.0373L37.645 5.53955H39.5008L42.2003 12.0572H42.2358L44.8641 5.53955H46.72Z" fill="white"/>
+                            <path d="M15.0315 6.5686H7.88525V9.49888L12.0009 9.49979C11.834 10.4748 11.2968 11.3059 10.4737 11.86V11.8605C10.4739 11.8604 10.4743 11.8602 10.4746 11.86L10.4005 13.6114L12.9245 13.7602C12.9241 13.7605 12.9238 13.7609 12.9235 13.7611C14.354 12.4372 15.1737 10.4801 15.1737 8.16789C15.1736 7.61197 15.1239 7.08008 15.0315 6.5686Z" fill="#0085F7"/>
+                            <path d="M10.4744 11.8601C10.4742 11.8602 10.4738 11.8604 10.4735 11.8606C9.79169 12.3202 8.91377 12.5891 7.88691 12.5891C5.90231 12.5891 4.21876 11.2518 3.61585 9.44925H3.61558C3.61567 9.44952 3.61576 9.44988 3.61585 9.45015L1.50871 9.11646L1.08911 11.4104C2.34128 13.8946 4.91437 15.5992 7.887 15.5992C9.94117 15.5992 11.667 14.9239 12.9234 13.7611C12.9238 13.7609 12.9242 13.7606 12.9244 13.7602L10.4744 11.8601Z" fill="#00A94B"/>
+                            <path d="M3.37787 7.99461C3.37787 7.48849 3.46222 6.99923 3.61587 6.53927L2.95791 4.57861H1.08868C0.571035 5.60602 0.279785 6.76567 0.279785 7.99461C0.279785 9.22356 0.571942 10.3832 1.08868 11.4106L1.08905 11.4103L3.61587 9.44996C3.61578 9.44968 3.61569 9.44941 3.6156 9.44905C3.46213 8.98945 3.37787 8.50047 3.37787 7.99461Z" fill="#FFBB00"/>
+                            <path d="M7.88688 0.389404C4.91488 0.389404 2.3407 2.09427 1.08862 4.57884L3.61572 6.53949C4.21863 4.73693 5.90219 3.39969 7.88679 3.39969C9.00825 3.39969 10.0126 3.78599 10.8055 4.54074L12.9766 2.37147C11.6581 1.14324 9.93896 0.389404 7.88688 0.389404Z" fill="#FF4031"/>
+                            </svg>
+                        </buttom>
+                    </div>
+                
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal3">
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3" style="border-radius: 10px;background: var(--Orange, #F63);padding: 16px 20px; border:none;">
+        Launch demo modal3
+    </button>
+
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="border-radius: 20px;">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><b>Add a New payment Method</b><h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body px-4">
+                <p style="color: #3361FF;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M11.2501 11.9063L8.34011 8.9963L11.2501 6.0863C11.5426 5.7938 11.5426 5.3213 11.2501 5.0288C10.9576 4.7363 10.4851 4.7363 10.1926 5.0288L6.75011 8.4713C6.45761 8.7638 6.45761 9.2363 6.75011 9.5288L10.1926 12.9713C10.4851 13.2638 10.9576 13.2638 11.2501 12.9713C11.5351 12.6788 11.5426 12.1988 11.2501 11.9063Z" fill="#3361FF"/>
+                </svg>Choose a different payment methods</p>
+            <div class="payment-list-container">
+                <div class="row d-flex align-items-center py-3 mb-4">
+                    <div class="col-2 payment-img-container">
+                        <img src="" alt="" class="d-block w-100 h-100 img-fluid"/>
+                    </div>
+                    <div class="col-10 payment-text">
+                        <h5>Let's set it up!</h5>
+                        <p class="mb-4">Sign in to PayPal by clicking on the button below and we will add it as a recurring payment 
+                            method to your account for future use.</p>
+                        <buttom style="border-radius: 10px; background: #FEBD42; padding: 16px 20px;">
+                            
+                        </buttom>
+                    </div>
+                
+                </div>
+                <div class="row">
+                    <p style="border-radius: 8px;background: var(--Background-COlor, #F7F8FA); padding: 10px 16px;"><b>Note:</b> In order to connect paypal as a saved payment method vou must initiate a transaction of $5.00 to verify your account. This charge will be applied to your first bill and only needs to be set up once.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal4">
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal4" style="border-radius: 10px;background: var(--Orange, #F63);padding: 16px 20px; border:none;">
+        Launch demo modal4
+    </button>
+
+    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="border-radius: 20px;">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><b>Add a New payment Method</b><h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body px-4">
+                <p style="color: #3361FF;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M11.2501 11.9063L8.34011 8.9963L11.2501 6.0863C11.5426 5.7938 11.5426 5.3213 11.2501 5.0288C10.9576 4.7363 10.4851 4.7363 10.1926 5.0288L6.75011 8.4713C6.45761 8.7638 6.45761 9.2363 6.75011 9.5288L10.1926 12.9713C10.4851 13.2638 10.9576 13.2638 11.2501 12.9713C11.5351 12.6788 11.5426 12.1988 11.2501 11.9063Z" fill="#3361FF"/>
+                </svg>Choose a different payment methods</p>
+            <div class="payment-list-container">
+                <div class="row d-flex align-items-center py-3 mb-4">
+                    <div class="col-2 payment-img-container">
+                        <img src="" alt="" class="d-block w-100 h-100 img-fluid"/>
+                    </div>
+                    <div class="col-10 payment-text">
+                        <h5>Let's setup credit card </h5>
+                        <p class="mb-4">We accept Visa, Mastercard, American Express, UnionPay, and Discover credit cards.
+                            <span>You may see a temporary authorization hold on your card, which your bank should release soon. DigitalOcean does not charge you until you" start using paid services.</span>
+                        </p>
+                    </div>
+                    <div class="col-12 form-container"> 
+                        <form>
+                            <div class="row">
+                                <div class="form-group col-6">
+                                    <label for="exampleInputNumber">Card Number<span>*</span></label>
+                                    <input type="text" class="form-control" id="exampleInputNumber" aria-describedby="emailHelp" placeholder="Enter card number">
+                                </div>
+                                <div class="form-group col-6">
+                                    <label for="exampleInputName">Cardholder Name<span>*</span></label>
+                                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Enter Name">
+                                </div>
+                                <div class="form-group col-6">
+                                    <label for="exampleInputDate">Expiry Date<span>*</span></label>
+                                    <input type="text" class="form-control" id="exampleInputDate" aria-describedby="emailHelp" placeholder="MM/YY">
+                                </div>
+                                <div class="form-group col-6">
+                                    <label for="exampleInputPassword1">CVC<span>*</span></label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter CVC number">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <h5>BILLING ADDRESS</h5>
+                                    <p>Please provide the billing address associated with the card you've provided.</p>
+                                </div>
+                                <div class="form-group col-12">
+                                    <label for="exampleInputPassword1">Country<span>*</span></label>
+                                    <select class="custom-select custom-select-lg mb-3">
+                                        <option selected>Select Country</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                </div>
+                                <div class="form-group col-12">
+                                    <label for="exampleInputAddress">Address Line 1<span>*</span></label>
+                                    <input type="text" class="form-control" id="exampleInputAddress1" placeholder="Enter Street name">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label for="exampleInputAddress2">Address Line 2</label>
+                                    <input type="text" class="form-control" id="exampleInputAddress2" placeholder="Enter Street name">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label for="exampleInputAddress2">State<span>*</span></label>
+                                    <select class="custom-select custom-select-lg mb-3">
+                                        <option selected>Select State</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                </div>
+                                <div class="form-group col-6 mb-0">
+                                    <label for="exampleInputAddress2">City<span>*</span></label>
+                                    <select class="custom-select custom-select-lg mb-3">
+                                        <option selected>Select City</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                </div>
+                                <div class="form-group col-6 mb-0">
+                                    <label for="exampleInputAddress">Postal Code<span>*</span></label>
+                                    <input type="text" class="form-control" id="exampleInputAddress1" placeholder="Enter Postal code">
+                                </div>
+                               <div class="col-12">
+                                    <p class="mb-4">Note: Your card may require additional verification from your bank</p>
+                                    <button type="submit" class="btn btn-primary w-100" style="border-radius: 10px;background: var(--Orange, #F63);padding: 16px 20px; border:none;">Add Card</button>
+                               </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal5">
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal5" style="border-radius: 10px;background: var(--Orange, #F63);padding: 16px 20px; border:none;">
+        Launch demo modal5
+    </button>
+
+    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="border-radius: 20px;">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><b>Edit Card</b><h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body px-4">    
+                <div class="payment-list-container">
+                    <div class="row d-flex align-items-center py-3 mb-4">
+                        <div class="col-12 form-container"> 
+                            <form>
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                        <label for="exampleInputNumber">Card Number<span>*</span></label>
+                                        <input type="text" class="form-control" id="exampleInputNumber" aria-describedby="emailHelp" placeholder="Enter card number">
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="exampleInputName">Cardholder Name<span>*</span></label>
+                                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Marcel Anderson">
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="exampleInputDate">Expiry Date<span>*</span></label>
+                                        <input type="text" class="form-control" id="exampleInputDate" aria-describedby="emailHelp" placeholder="MM/YY">
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="exampleInputPassword1">CVC<span>*</span></label>
+                                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter CVC number">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <h5>BILLING ADDRESS</h5>
+                                        <p>Please provide the billing address associated with the card you've provided.</p>
+                                    </div>
+                                    <div class="form-group col-12">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label pt-1" for="customCheck1">Billing address is the same as my account address</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12">
+                                        <label for="exampleInputPassword1">Country<span>*</span></label>
+                                        <select class="custom-select custom-select-lg mb-3">
+                                            <option selected>Select Country</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-12">
+                                        <label for="exampleInputAddress">Address Line 1<span>*</span></label>
+                                        <input type="text" class="form-control" id="exampleInputAddress1" placeholder="Enter Street name">
+                                    </div>
+                                    <div class="form-group col-12">
+                                        <label for="exampleInputAddress2">Address Line 2</label>
+                                        <input type="text" class="form-control" id="exampleInputAddress2" placeholder="Enter Street name">
+                                    </div>
+                                    <div class="form-group col-12">
+                                        <label for="exampleInputAddress2">State<span>*</span></label>
+                                        <select class="custom-select custom-select-lg mb-3">
+                                            <option selected>Select State</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-6 mb-0">
+                                        <label for="exampleInputAddress2">City<span>*</span></label>
+                                        <select class="custom-select custom-select-lg mb-3">
+                                            <option selected>Select City</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-6 mb-0">
+                                        <label for="exampleInputAddress">Postal Code <span>*</span></label>
+                                        <input type="text" class="form-control" id="exampleInputAddress1" placeholder="Enter Postal code">
+                                    </div>
+                                <div class="col-12">
+                                        <button type="submit" class="btn btn-primary w-100" style="border-radius: 10px;background: var(--Orange, #F63);padding: 16px 20px; border: none;">Add Card</button>
+                                </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
